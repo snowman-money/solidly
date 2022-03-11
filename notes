@@ -47,5 +47,5 @@
     ethers.BigNumber.from("536754000000000000000000"),
     ethers.BigNumber.from("518240000000000000000000"),
     ethers.BigNumber.from("511920000000000000000000"),
-    ethers.BigNumber.from("452870000000000000000000")], 
+    ethers.BigNumber.from("452870 000,000,000,000,000,000")], 
     ethers.BigNumber.from("100000000000000000000000000"));
