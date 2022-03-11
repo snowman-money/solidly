@@ -3,8 +3,8 @@ pragma solidity 0.8.11;
 
 contract BaseV1 {
 
-    string public constant symbol = "SOLID";
-    string public constant name = "Solidly";
+    string public constant symbol = "SnowMan";
+    string public constant name = "SnowMan";
     uint8 public constant decimals = 18;
     uint public totalSupply = 0;
 
