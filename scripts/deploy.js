@@ -19,7 +19,7 @@ async function main() {
   console.log("Core address: ", core.address);
   
   // Add base asset of chain to this line currently set to wrapped fantom 
-  const factory = await Factory.deploy(core.address, "0x27Ce4 1c3cb9AdB5Edb2d8bE253A1c6A64Db8c96d");
+  const factory = await Factory.deploy(core.address, "0x27Ce41c3cb9AdB5Edb2d8bE253A1c6A64Db8c96d");
   console.log("Factory address: ", factory.address);
   const ve = await Ve.deploy(token.address);
   console.log("Ve address: ", ve.address);

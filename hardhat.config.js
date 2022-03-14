@@ -57,18 +57,20 @@ module.exports = {
       accounts: { mnemonic: mnemonic },
       timeout: 900_000,
       gasPrice: 225000000000,
-      gas: 6000000,
-      initialBaseFeePerGas: 0
+      gas: 60000000,
+      gasLimit: 50000000,
+      gasMultiplier: 40
       
     },
     AvaxTest: {
       url: 'https://api.avax-test.network/ext/bc/C/rpc',
       accounts: { mnemonic: mnemonic },
-      timeout: 900_000,
+      gas: 6000000000,
+      gasMultiplier: 2.5,
+      confirmations: 3,
       gasPrice: 225000000000,
-      gas: 6000000,
-      gasMultiplier: 40 ,
-      gasLimit: 5000000
+      chainId: 43113,
+      timeout: 300_000
 
       },
       dashboard: {
