@@ -1,0 +1,20 @@
+$ npx hardhat run scripts/deploytestnet.js --network AvaxTest
+Tokens have been deployed
+Gauges have been deployed
+Bribes have been deployed
+Core has been deployed
+Factory has been deployed
+Ve has been deployed
+Ve_dist has been deployed
+Voter has been deployed
+Minter has been deployed
+Gauges Contract  Address: 0x07bbdB2465c046Bc107a11BB4ed9396F775b4952
+Token Contract Address: 0x8929e32C13F85afdf3820DB3807722834c208Cb1
+Bribes Contract Address: 0x2E99501E93056E0C564Dd6fE53c93bf5CC768180
+Voter Contract Address: 0x04DBE56363Fda2aC2F5A778EFcB0f308CF2c327c
+Ve Contract Address: 0xdB378bead1F442e1bbA6a89958abe46cB8f7A663
+Ve_dist Contract Address: 0x7b381B7DEFDED349101412EB1EA50c99750bd041
+Minter Contract Address: 0x3c4ba67B0e04D697F7Ddd8e92Dd3A331114C4C85
+Core Contract Address: 0x59267708a2B8F751cB08938788e62A254B382ee6
+Factory Contract Address: 0x83d956A6f975605AbF0cf1834241FC53f5fB151f
+

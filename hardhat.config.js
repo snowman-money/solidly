@@ -1,11 +1,8 @@
-const {
-  mnemonic,
-} = require('./secrets.json');
+const { mnemonic } = require("./secrets.json");
 
 require("@nomiclabs/hardhat-waffle");
 require("@float-capital/solidity-coverage");
 require("@nomiclabs/hardhat-web3");
-
 
 // This is a sample Hardhat task. To learn how to create your own go to
 // https://hardhat.org/guides/create-task.html
@@ -16,21 +13,20 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
     console.log(account.address);
   }
 });
-task('balance', "Prints an account's balance")
-    .addParam('account', "The account's address")
-    .setAction(async (taskArgs) => {
-        const account = web3.utils.toChecksumAddress(taskArgs.account);
-        const balance = await web3.eth.getBalance(account);
+task("balance", "Prints an account's balance")
+  .addParam("account", "The account's address")
+  .setAction(async (taskArgs) => {
+    const account = web3.utils.toChecksumAddress(taskArgs.account);
+    const balance = await web3.eth.getBalance(account);
 
-        console.log(web3.utils.fromWei(balance, 'ether'), 'ETH');
-    });
+    console.log(web3.utils.fromWei(balance, "ether"), "ETH");
+  });
 
-
-task('pk', 'Prints the pk account', async () => {
+task("pk", "Prints the pk account", async () => {
   const wallet = new ethers.Wallet.fromMnemonic(mnemonic);
   const address = wallet.getAddress();
-  console.log('address: ', address);
-  console.log('privateKey: ', wallet.privateKey);
+  console.log("address: ", address);
+  console.log("privateKey: ", wallet.privateKey);
 });
 // You need to export an object to set up your config
 // Go to https://hardhat.org/config/ to learn more
@@ -59,24 +55,21 @@ module.exports = {
       gasPrice: 225000000000,
       gas: 60000000,
       gasLimit: 50000000,
-      gasMultiplier: 40
-      
+      gasMultiplier: 40,
     },
     AvaxTest: {
-      url: 'https://api.avax-test.network/ext/bc/C/rpc',
+      url: "https://api.avax-test.network/ext/bc/C/rpc",
       accounts: { mnemonic: mnemonic },
-      gas: 6000000000,
-      gasMultiplier: 2.5,
-      confirmations: 3,
-      gasPrice: 225000000000,
+      // gas: 600000000,
+      // gasMultiplier: 2.5,
+      // confirmations: 3,
+      // gasPrice: 25000000000,
       chainId: 43113,
-      timeout: 300_000
-
-      },
-      dashboard: {
-        url: 'http://localhost:24012/rpc'
-        }
-
-     
+      timeout: 300_000,
+      gasLimit: 25000000000,
+    },
+    dashboard: {
+      url: "http://localhost:24012/rpc",
+    },
   },
 };
